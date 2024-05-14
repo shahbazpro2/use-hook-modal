@@ -42,7 +42,7 @@ export const useModalState = (key: string) => {
   return modalVal
 }
 
-export const useOpenCloseModal = () => useAtom(openCloseModalAtom)
+export const useOpenCloseModal = () => useAtom(openCloseModalAtom)?.[1]
 
 export const useGetSetModal = (key: string) => {
   const getModal = useModalState(key)
