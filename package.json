@@ -1,6 +1,6 @@
 {
   "name": "use-hook-modal",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Custom hook for modal in React",
   "repository": {
     "type": "git",
