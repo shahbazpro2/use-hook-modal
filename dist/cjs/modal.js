@@ -32,7 +32,7 @@ var useModalState = function (key) {
     return modalVal;
 };
 exports.useModalState = useModalState;
-var useOpenCloseModal = function () { return (0, jotai_1.useAtom)(exports.openCloseModalAtom); };
+var useOpenCloseModal = function () { var _a; return (_a = (0, jotai_1.useAtom)(exports.openCloseModalAtom)) === null || _a === void 0 ? void 0 : _a[1]; };
 exports.useOpenCloseModal = useOpenCloseModal;
 var useGetSetModal = function (key) {
     var getModal = (0, exports.useModalState)(key);

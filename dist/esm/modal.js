@@ -26,7 +26,7 @@ export var useModalState = function (key) {
     var modalVal = useAtom(React.useMemo(function () { return getModalAtom(key); }, []))[0];
     return modalVal;
 };
-export var useOpenCloseModal = function () { return useAtom(openCloseModalAtom); };
+export var useOpenCloseModal = function () { var _a; return (_a = useAtom(openCloseModalAtom)) === null || _a === void 0 ? void 0 : _a[1]; };
 export var useGetSetModal = function (key) {
     var getModal = useModalState(key);
     var openCloseModal = useOpenCloseModal();

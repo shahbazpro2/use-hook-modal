@@ -17,10 +17,10 @@ export declare const openCloseModalAtom: import("jotai").WritableAtom<null, [{
 };
 export declare const getModalAtom: (key: string) => import("jotai").Atom<any>;
 export declare const useModalState: (key: string) => any;
-export declare const useOpenCloseModal: () => [null, (args_0: {
+export declare const useOpenCloseModal: () => (args_0: {
     key: any;
     status: any;
     data: any;
-}) => void];
+}) => void;
 export declare const useGetSetModal: (key: string) => any[];
 export {};

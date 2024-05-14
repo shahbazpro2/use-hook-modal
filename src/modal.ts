@@ -1,11 +1,12 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import { atom, useAtom } from 'jotai'
+import { atom, useAtom, useSetAtom } from 'jotai'
 import React from 'react'
 
 type Modal = {
   [key: string]: {
+    key: string
     status: boolean
-    data: any
+    data?: any
   }
 }
 
@@ -42,7 +43,10 @@ export const useModalState = (key: string) => {
   return modalVal
 }
 
-export const useOpenCloseModal = () => useAtom(openCloseModalAtom)?.[1]
+export const useOpenCloseModal = () => {
+  const setModal = useSetAtom(openCloseModalAtom)
+  return setModal
+}
 
 export const useGetSetModal = (key: string) => {
   const getModal = useModalState(key)
