@@ -9,13 +9,13 @@ This package provides utilities for managing modal states in a React application
 You can install this package via npm:
 
 ```sh
-npm install your-package-name
+npm install use-hook-modal
 ```
 
 or via yarn:
 
 ```sh
-yarn add your-package-name
+yarn add use-hook-modal
 ```
 
 ## Usage
@@ -27,15 +27,15 @@ yarn add your-package-name
    In your component file, import the hooks from the package:
 
    ```javascript
-   import { useGetSetModal, useModalState, useOpenCloseModal } from 'your-package-name'
+   import { useGetSetModal, useModalState, useOpenCloseModal } from 'use-hook-modal'
    ```
 
 2. **Initialize Modal State:**
 
-   Use the `useGetSetModal` hook to initialize and manage the state of a modal by its key:
+   Use the `exampleKey` hook to initialize and manage the state of a modal by its key:
 
    ```javascript
-   const [modalState, openCloseModal] = useGetSetModal('exampleModal')
+   const [modalState, openCloseModal] = useGetSetModal('exampleKey')
    ```
 
 ### Example Component
@@ -44,17 +44,17 @@ Here’s an example of how to use these hooks in a component:
 
 ```javascript
 import React from 'react'
-import { useGetSetModal } from 'your-package-name'
+import { useGetSetModal } from 'use-hook-modal'
 
 const ExampleComponent = () => {
-  const [modalState, openCloseModal] = useGetSetModal('exampleModal')
+  const [modalState, openCloseModal] = useGetSetModal('exampleKey')
 
   const openModal = () => {
-    openCloseModal({ key: 'exampleModal', status: true, data: { exampleData: 'Some data' } })
+    openCloseModal({ key: 'exampleKey', status: true, data: { exampleData: 'Some data' } })
   }
 
   const closeModal = () => {
-    openCloseModal({ key: 'exampleModal', status: false, data: null })
+    openCloseModal({ key: 'exampleKey', status: false, data: null })
   }
 
   return (
@@ -76,7 +76,7 @@ export default ExampleComponent
 A custom hook that returns the state and open/close function for a specific modal.
 
 ```javascript
-const [modalState, openCloseModal] = useGetSetModal('exampleModal')
+const [modalState, openCloseModal] = useGetSetModal('exampleKey')
 ```
 
 #### `useModalState`
@@ -84,7 +84,7 @@ const [modalState, openCloseModal] = useGetSetModal('exampleModal')
 Hook to get the state of a specific modal.
 
 ```javascript
-const modalState = useModalState('exampleModal')
+const modalState = useModalState('exampleKey')
 ```
 
 #### `useOpenCloseModal`
